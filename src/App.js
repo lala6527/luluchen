@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { LuluChen } from "./pages/luluchen";
+import { Home } from "./pages/home";
 
 import "./App.scss";
 
@@ -9,7 +9,7 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<LuluChen />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>
