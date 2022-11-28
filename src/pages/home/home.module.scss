@@ -1,3 +1,4 @@
+.home{
 .titlePage{
     position: relative;
 img{
@@ -38,6 +39,8 @@ h3 {
 section{
     display: flex;
     padding:0 120px;
+    margin-bottom: 60px;
+
     .flexItem{
         width:34%;
         padding-right: 48px;
@@ -54,10 +57,10 @@ section{
         font-weight: 400px;
         line-height: 24px;
         font-family: 'Noto Sans';
+        margin-bottom: 20px;
     }
     .tag {
     span{
-        margin-top: 4px;
         margin-right: 8px ;
         background-color: #D9D9D9;
         font-size: 12px;
@@ -74,5 +77,27 @@ section{
 
     }
 
+}
+a{  
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 129px;
+    :hover {
+        background-color: black;
+        color: #FFF;
+    }
+    input{
+        width: 144px;
+        height: 42px;
+        background-color: white;
+        border: black 1px solid;
+        border-radius: 4px;
+        font-family: 'Noto Sans';
+        font-size: 16px;
+        font-weight: 400px;
+        line-height: 22px;
 
+    }
+}
 }
