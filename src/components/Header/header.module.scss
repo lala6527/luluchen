@@ -1,8 +1,9 @@
 
 
 .header{
-    max-width: 1440px;
+    max-width: 100%;
     max-height: 80px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.08);
     background-color: #FFF;
     display: flex;
     justify-content: space-between;

@@ -6,14 +6,14 @@ export const Header = () => {
 
     <header className={styles.header}>
 
-      <a href="luluchen"><img src="/images/logo.png" alt="" /></a>
+     <Link to ="home"><img src="/images/logo.png" alt="Home" /></Link>
       <nav>
-        <ul>
+        <ul >
           <li>
-            <Link href="about">About</Link>
+            <Link to ="about">About</Link>
           </li>
           <li>
-            <Link href="portfolio">Portfolio</Link>
+            <Link to ="portfolio">Portfolio</Link>
           </li>
           <li>
             <Link href="visual">Visual</Link>
