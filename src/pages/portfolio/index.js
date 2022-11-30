@@ -5,8 +5,8 @@ return(
     <div className={styles.container}>
     <div className={styles.portfolio}>  
     <article>
-     <h3 className ={styles.h3Portfolio}>Front-end Development Portfolio</h3> 
-     <p className ={styles.pPortfolio}>Succeed online with a website that is fast, easy to use, 
+     <h3>Front-end Development Portfolio</h3> 
+     <p>Succeed online with a website that is fast, easy to use, 
         and built with best practices and a passion for design.</p>  
     </article>
     <section>

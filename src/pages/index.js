@@ -1,4 +1,5 @@
-import{ Home } from "./home"
-import { Portfolio } from "./portfolio"
+import{ Home } from "./home";
+import { Portfolio } from "./portfolio";
+import { About } from "./about";
 
-export {Home , Portfolio};
+export {Home , Portfolio,About};

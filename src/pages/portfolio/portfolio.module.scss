@@ -1,22 +1,25 @@
 .portfolio{
 
 article{
-    display: flex;
-    justify-content: center;
-    .h3Portfolio{
+
+    h3{
         font-family: 'Noto Sans';
         font-weight: 700;
         font-size: 48px;
-        line-height: 67.2;
+        line-height: 67.2px;
+        text-align: center;
+        margin: 120px 320px 12px 329px;
+
     }
-    // .pPortfolio{
-    //     font-family: 'Noto Sans';
-    //     font-weight: 400;
-    //     font-size: 36px;
-    //     line-height: 50px;
-    //     text-align: center;
-    //     color: #7D7D7D;
-    // }
+    p{
+        font-family: 'Noto Sans';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: center;
+        color: #7D7D7D;
+        margin: 0px 224px 120px 215px;
+    }
 }
 
 section{
