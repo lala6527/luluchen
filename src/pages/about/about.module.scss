@@ -1,6 +1,8 @@
 .about{
+    margin: 0 120px;
+
     section{
-        margin: 100px 120px 60px 120px;
+        margin: 100px 0px 60px 0px;
         display: flex;
     img{
         width: 33%;
@@ -28,6 +30,40 @@
 }
 hr{
     border: 1px solid #ECECEC;
-    margin: 60px;
+    margin: 60px 0;
+
 }
+article{
+    h3{
+        font-family: 'Noto Sans';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 36px;
+    }
+    p{
+        font-family: 'Noto Sans';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 36px;
+    }
+    img{
+        margin-right: 40px;
+    }
+}
+main{
+    display: flex;
+    img{
+        width: 10%;
+        width: 40px;
+        border: #ECECEC solid 1px;
+        border-radius: 8px;
+        
+    }
+    .workexperience{
+        width: 90%;
+    }
+}
+
 }

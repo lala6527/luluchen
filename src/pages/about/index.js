@@ -19,7 +19,29 @@ export const About = () => {
                  </div> 
             </section>
             <hr />
+             <article>
+            <h3>Software I love to use</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+             <img src="./images/Figma.png" alt="Figma"/>
+             <img src="./images/Visual.png" alt="Visual Studio code"/>
+             <img src="./images/Github.png" alt="Github"/>
+             <img src="./images/chrome.png" alt="chrome"/>            
+         
+            <hr />
+            </article>
+            <main>
+            <img src="./images/workimage.png" alt="workimage"/>
+            <div className={styles.workexprience}>
+            <h3>Work experience</h3>
+            <h4>Company Name</h4>
+            <h5>Position (2022 Mar - Present)</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p> 
             </div>
+            </main>
+            </div>           
         </div>
     )
 
