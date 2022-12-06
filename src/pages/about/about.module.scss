@@ -48,22 +48,39 @@ article{
         line-height: 22px;
         margin-bottom: 36px;
     }
-    img{
-        margin-right: 40px;
-    }
-}
-main{
-    display: flex;
-    img{
-        width: 10%;
-        width: 40px;
-        border: #ECECEC solid 1px;
-        border-radius: 8px;
-        
-    }
-    .workexperience{
-        width: 90%;
-    }
-}
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 40px;
 
 }
+h3{
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 36px;
+}
+figure{
+    display: flex;
+    .figureimg{
+        display: block;
+        padding-right: 40px;
+        
+  img{
+    border: #ECECEC 1px solid;
+    border-radius: 8px;
+    width: 40px;
+    padding: 12px;
+  }}
+  h4{font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+
+  }
+    
+
+
+}}}

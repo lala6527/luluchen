@@ -35,9 +35,11 @@ export const Home = () => {
     </div>
     <img src="./images/todolist.png"  alt="/todolist"/>
     </section>
+    <div className={styles.aPortfolio}>
     <a href="Portfolio">
-    <input type="button" value="More Portfolio" />
+    More Portfolio
     </a>
+    </div>
     </div>
      </div>
   );

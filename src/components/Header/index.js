@@ -3,12 +3,12 @@ import styles from "./header.module.scss";
 
 export const Header = () => {
   return (
-
+    <div className={styles.container}>
     <header className={styles.header}>
 
      <Link to ="home"><img src="/images/logo.png" alt="Home" /></Link>
       <nav>
-        <ul >
+       <ul class="flex-nav">
           <li>
             <Link to ="about">About</Link>
           </li>
@@ -25,6 +25,6 @@ export const Header = () => {
       </nav>
     
     </header>
-
-  );
-};
+</div>
+  )
+}

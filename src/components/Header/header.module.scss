@@ -1,23 +1,27 @@
+.container{
+box-shadow: 0px 4px 4px rgba(0,0,0,0.08);
 
+padding: 17px 126px; 
 
 .header{
     max-width: 100%;
     max-height: 80px;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.08);
     background-color: #FFF;
     display: flex;
     justify-content: space-between;
-    margin: 17px 126px;    
     img{
         width: 129px;
         height: 46px;
     }
 
-    nav{
-        ul{ margin: 0;
+    nav{        
+        ul{ display: flex;
+            justify-content: center;
+            list-style: none;
+            gap:32px;
+            margin-top: 10px;
 
-            li{ display: inline-block;
-                padding:7px 16px;
+            li{ 
                 font-family: 'Noto Sans';
                 font-style: normal;
                 font-weight: 300;
@@ -41,3 +45,4 @@
 }
 }
 
+}
