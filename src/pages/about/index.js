@@ -2,6 +2,7 @@ import styles from "./about.module.scss";
 
 export const About = () => {
     return(
+        
         <div className="container">
             <div className={styles.about}>
             <section>
@@ -44,6 +45,42 @@ export const About = () => {
             </p> 
             </div>
             </figure>
+            <figure>
+            <div className={styles.figureimg}>
+            <img src="./images/workimage.png" alt="workimage"/>
+            </div>
+            <div className={styles.item}>
+            <h4>Company Name</h4>
+            <h5>Position (2022 Mar - Present)</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p> 
+            </div>
+            </figure>
+            <figure>
+            <div className={styles.figureimg}>
+            <img src="./images/workimage.png" alt="workimage"/>
+            </div>
+            <div className={styles.item}>
+            <h4>Company Name</h4>
+            <h5>Position (2022 Mar - Present)</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p> 
+            </div>
+            </figure>
+            <hr />
+            <article>
+            <h3>What I like to do</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+             <div className={styles.grid}>
+             <img src="./images/instagram_01.png" alt="instagram photo"/>
+             <img src="./images/instagram_02.png" alt="instagram photo"/>
+             <img src="./images/instagram_03.png" alt="instagram photo"/>
+             <img src="./images/instagram_04.png" alt="instagram photo"/>            
+            </div>
+            </article>
             </div>           
         </div>
     )

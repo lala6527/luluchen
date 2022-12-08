@@ -16,10 +16,10 @@ export const Header = () => {
             <Link to ="portfolio">Portfolio</Link>
           </li>
           <li>
-            <Link href="visual">Visual</Link>
+            <Link to="visual">Visual</Link>
           </li>
           <li>
-            <Link href="Resume">Resume</Link>
+            <Link to="Resume">Resume</Link>
           </li>
         </ul>
       </nav>

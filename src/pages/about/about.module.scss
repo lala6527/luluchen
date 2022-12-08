@@ -1,5 +1,5 @@
 .about{
-    margin: 0 120px;
+    padding-bottom: 169px;
 
     section{
         margin: 100px 0px 60px 0px;
@@ -8,6 +8,7 @@
         width: 33%;
         margin-right: 40px;
     }
+    
     .flexItem{
         width: 67%;
         h3{
@@ -51,36 +52,51 @@ article{
     .grid{
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        
         gap: 40px;
 
+}
 }
 h3{
     font-family: 'Noto Sans';
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
-    margin-bottom: 36px;
+    margin-bottom: 60px;
 }
 figure{
     display: flex;
+    padding-bottom: 48px;
     .figureimg{
         display: block;
         padding-right: 40px;
+        }
         
   img{
     border: #ECECEC 1px solid;
     border-radius: 8px;
     width: 40px;
     padding: 12px;
-  }}
+    }
+  
   h4{font-family: 'Noto Sans';
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 8px;
+    }
+h5{font-family: 'Noto Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;    
+} 
+p{font-family: 'Noto Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color:#7D7D7D;
+}  
 
-  }
-    
-
-
-}}}
+}
+}
