@@ -1,7 +1,6 @@
 import styles from "./home.module.scss";
-
-export const Home = () => {
-
+import Portfolio from "../portfolio";
+  export const Home = () =>{
   return (
   <div className={styles.container}>
     <div className={styles.home}>
@@ -13,6 +12,7 @@ export const Home = () => {
     </div>
      <h3> Featured Work</h3>
     <section>
+    <Portfolio>
     <div className={styles.flexItem}>
     <h2>HurryBuy Dashboard</h2>
     <p>
@@ -22,6 +22,7 @@ export const Home = () => {
     </p>
     <div className={styles.tag}> <span>JavaScript</span><span>HTML</span><span>CSS/SASS</span><span>React</span></div>
     </div>
+    </Portfolio>
     <img src="./images/chart.png"  alt="chart"/>
     </section>
     <section>
@@ -39,8 +40,9 @@ export const Home = () => {
     <a href="Portfolio">
     More Portfolio
     </a>
+    
     </div>
     </div>
      </div>
-  );
+  )
 }
