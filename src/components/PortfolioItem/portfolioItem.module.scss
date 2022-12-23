@@ -21,6 +21,7 @@ section{
         font-family: 'Noto Sans';
         margin-bottom: 20px;
     }
+  
     .tag {
     span{
         margin-right: 8px ;
@@ -31,12 +32,30 @@ section{
         font-family: 'Noto Sans';
         border-radius: 4px;
         padding:4px 8px 4px 8px;
+        margin-bottom: 20px;
     }
     }
-    a{
+    .a{
+        padding-top: 20px;
+      
+        a{  font-size: 16px;
+            font-weight: 400px;
+            line-height: 22px;
+            font-family: 'Noto Sans';
+            color: #009861;
+            text-decoration: none;
+            &:hover{
+                color: #006743;
+            }
+        
+        }
+
+    }
+    .img{
         width: 67%;
-    }
+    
       img{
-        width: 67%;
+        width: 100%;
       }
+    }
 }

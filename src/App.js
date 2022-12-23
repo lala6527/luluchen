@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header, Footer } from "./components";
 import { Home, Portfolio,About,Visual } from "./pages";
-
+import { VisualDetail } from "./components/Content/VisualDetail";
 import './App.scss';
 
 const App = () => {
@@ -14,9 +14,11 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/visual" element={<Visual />} />
+        <Route path="/VisualDatail" element={<VisualDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
+    
   );
 }
 
