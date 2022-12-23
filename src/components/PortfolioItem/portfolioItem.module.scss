@@ -1,42 +1,41 @@
-
-section{
-    display: flex;
-    margin-bottom: 60px;
-    padding: 0 120px;
-   .flexItem{
-        width:34%;
-        padding-right: 48px;
-    } 
-    h2{
-        font-size: 24px;
-        font-weight: 400px;
-        line-height: 33px;
-        font-family: 'Noto Sans';
-        margin-bottom: 28px;
+section {
+  display: flex;
+  margin-bottom: 60px;
+  padding: 0 120px;
+  .flexItem {
+    width: 34%;
+    padding-right: 48px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 400px;
+    line-height: 33px;
+    font-family: "Noto Sans";
+    margin-bottom: 28px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 24px;
+    font-family: "Noto Sans";
+    margin-bottom: 20px;
+  }
+  .tag {
+    span {
+      margin-right: 8px;
+      background-color: #d9d9d9;
+      font-size: 12px;
+      font-weight: 400px;
+      line-height: 12px;
+      font-family: "Noto Sans";
+      border-radius: 4px;
+      padding: 4px 8px 4px 8px;
     }
-    p{
-        font-size: 16px;
-        font-weight: 400px;
-        line-height: 24px;
-        font-family: 'Noto Sans';
-        margin-bottom: 20px;
+  }
+  .img {
+    width: 67%;
+    img{
+      width: 100%;
     }
-    .tag {
-    span{
-        margin-right: 8px ;
-        background-color: #D9D9D9;
-        font-size: 12px;
-        font-weight: 400px;
-        line-height: 12px;
-        font-family: 'Noto Sans';
-        border-radius: 4px;
-        padding:4px 8px 4px 8px;
-    }
-    }
-    a{
-        width: 67%;
-    }
-      img{
-        width: 67%;
-      }
+  }
 }
