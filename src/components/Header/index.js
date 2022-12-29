@@ -19,7 +19,7 @@ export const Header = () => {
             <Link to="visual">Visual</Link>
           </li>
           <li>
-            <a href="https://docs.google.com/document/d/1rOFxdGvFyNvc1Heji_QVJZvA2VmttG9Zo-7OWYAHdZs/edit?usp=sharing">Resume</a>
+            <a href="https://docs.google.com/document/d/1rOFxdGvFyNvc1Heji_QVJZvA2VmttG9Zo-7OWYAHdZs/edit?usp=sharing" target={"_blank"}>Resume</a>
           </li>
         </ul>
       </nav>

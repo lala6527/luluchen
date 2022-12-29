@@ -2,21 +2,18 @@ import styles from './visualDetailItem.module.scss';
 
 export const VisualDetailItem = (props) =>{
 return(
-
-<section>
-    <div className={styles.background}>  
+<div className={styles.visualDetailItem}>
    <img src ={props.background} alt={props.title} />
-   </div>  
-   <h2>{props.title}</h2>
-   <p>{props.summmary}</p>
-   <h3>{props.subtitle}</h3>
-   <p>{props.content}</p>
-   <div className={styles.detailimg}>
+   <div className="container">
+   <h2 className={styles.visualTitle}>{props.title}</h2>
+   <p className={styles.visualSummary}>{props.summary}</p>
+   <h3 className={styles.visualSubtitle}>{props.subtitle}</h3>
+   <p className={styles.visualContent}>{props.content}</p>
    <img src={props.img} alt={props.subtitleOne}></img>
+   <h3 className={styles.visualSubtitleOne}>{props.subtitleOne}</h3>
+   <p className={styles.visualContentOne}>{props.contentOne}</p>
    </div>
-   <h3>{props.subtitleOne}</h3>
-   <p>{props.contentOne}</p>
-   </section>
+   </div>
 
    )
 }
