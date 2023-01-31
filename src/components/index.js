@@ -1,3 +1,4 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-export { Header, Footer};
+import { Charts} from "./charts";
+export { Header, Footer , Charts};
