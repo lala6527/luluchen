@@ -1,11 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { Home, Portfolio,About,Visual } from "./pages";
-import { VisualDetail } from "./components/Content/VisualDetail";
+import { Home, Portfolio, About, Visual } from "./pages";
+import { VisualDetail } from "./pages/visual/detail";
 import { Charts } from "./components/charts";
 import { Todo } from "./components/ToDo";
-
-import './App.scss';
+import "./App.scss";
 
 const App = () => {
   return (
@@ -16,15 +15,13 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/visual" element={<Visual />} />
-        <Route path="/visualDetail" element={<VisualDetail />} />
+        <Route path="/visual/:vid" element={<VisualDetail />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/todo" element={<Todo />} />
-
-      </Routes>      
+      </Routes>
       <Footer />
     </BrowserRouter>
-    
   );
-}
+};
 
 export default App;
