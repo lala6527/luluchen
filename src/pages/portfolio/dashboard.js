@@ -1,7 +1,7 @@
-export const Charts = () => {
+export const Dashboard = () => {
   return (
     <div className="container">
-      <h1>Charts</h1>
+      <h1>Dashboard</h1>
     </div>
   );
 }

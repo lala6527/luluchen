@@ -6,7 +6,7 @@ const portfolio = [
     name: "HurryBuy Dashboard",
     summary: "A dashboard for online retailers which helps to quickly identify the most efficient channels. Monitor conversion rates, new customer traffic, channel revenue and optimize your marketing activities based on results.",
     img: "images/Dashboard.png",
-    link: "/portfolio/hurrybuy",
+    link: "/portfolio/dashboard",
     tag: ["JavaScript", "HTML", "CSS/SASS", "React"]
   },
   {
