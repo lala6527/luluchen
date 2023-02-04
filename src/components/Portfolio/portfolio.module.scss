@@ -1,0 +1,81 @@
+.portfolioItem {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  line-height: 1.5;
+  > a {
+    width: 67%;
+    img {
+      width: 100%;
+    }
+  }
+  figcaption {
+    width: 33%;
+    padding-right: 48px;
+    h2 {
+      font-size: 24px;
+      margin: 0 0 28px 0;
+    }
+    > p {
+      margin: 0 0 28px 0;
+      color: #666;
+    }
+    .tags {
+      span {
+        margin-right: 4px;
+        background-color: #d9d9d9;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+    }
+    a {
+      display: block;
+      margin-top: 20px;
+      color: #009861;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    > a {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    figcaption {
+      width: 100%;
+      padding-right: 0;
+      h2 {
+        font-size: 24px;
+        margin: 0 0 28px 0;
+      }
+      > p {
+        margin: 0 0 28px 0;
+        color: #666;
+      }
+      .tags {
+        span {
+          margin-right: 4px;
+          background-color: #d9d9d9;
+          font-size: 12px;
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+      }
+      a {
+        display: block;
+        margin-top: 20px;
+        color: #009861;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
