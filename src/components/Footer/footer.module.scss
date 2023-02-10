@@ -1,23 +1,21 @@
-
-footer{
-display: flex;
-justify-content: center;
-border-top:#D9D9D9 1px solid;
-padding: 60px 0 40px 0;
-.item{
- display: flex;
-justify-content: center;
-gap: 24px;
-
-}
-p{
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: #d9d9d9 1px solid;
+  padding: 60px 0 40px 0;
+  margin-top: 60px;
+  .item {
     display: flex;
     justify-content: center;
-    color:#7D7D7D;
-    font-family: 'Noto Sans';
+    gap: 24px;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    color: #7d7d7d;
+    font-family: "Noto Sans";
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
-}
-
+  }
 }
