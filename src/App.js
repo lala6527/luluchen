@@ -1,11 +1,36 @@
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { Header, Footer } from "./components";
+// import { Home, Portfolio, About, Visual } from "./pages";
+// import { VisualDetail } from "./pages/visual/detail";
+
+
+// import "./App.scss";
+
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//       <Header />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/portfolio" element={<Portfolio />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/visual" element={<Visual />} />
+//         <Route path="/visual/:vid" element={<VisualDetail />} />
+//       </Routes>      
+//       <Footer />
+//     </BrowserRouter>
+//   );
+// };
+
+// export default App;
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { Home, Portfolio,About,Visual } from "./pages";
-import { VisualDetail } from "./components/Content/VisualDetail";
-import { Charts } from "./components/charts";
-import { Todo } from "./components/ToDo";
-
-import './App.scss';
+import { Home, Portfolio, About, Visual } from "./pages";
+import { VisualDetail } from "./pages/visual/detail";
+// import { Dashboard } from "./pages/portfolio/dashboard";
+// import { Todo } from "./pages/portfolio/todo";
+// import { Calculator } from "./pages/portfolio/calculator";
+import "./App.scss";
 
 const App = () => {
   return (
@@ -14,17 +39,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        {/* <Route path="/portfolio/todo" element={<Todo />} />
+        <Route path="/portfolio/dashboard" element={<Dashboard />} />
+        <Route path="/portfolio/calculator" element={<Calculator />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/visual" element={<Visual />} />
-        <Route path="/visualDetail" element={<VisualDetail />} />
-        <Route path="/charts" element={<Charts />} />
-        <Route path="/todo" element={<Todo />} />
-
-      </Routes>      
+        <Route path="/visual/:vid" element={<VisualDetail />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
-    
   );
-}
+};
 
 export default App;

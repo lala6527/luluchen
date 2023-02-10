@@ -61,7 +61,7 @@ export const About = () => {
             </figure>
             <figure>
             <div className={styles.figureimg}>
-            <img src="./images/coffee.j" alt="workimage"/>
+            <img src="./images/coffee.jpeg" alt="workimage"/>
             </div>
             <div className={styles.item}>
             <h4>多一點有限公司</h4>

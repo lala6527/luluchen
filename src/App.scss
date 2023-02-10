@@ -6,4 +6,17 @@
 .container{
     width: 1200px;
     margin: 0 auto;
-}
+;
+    @media (max-width: 767px) {
+      // mobile
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      // ipad
+      width: 720px;
+    }
+    @media (min-width: 1200px) {
+      // desktop
+      width: 1140px;
+    }
+  }

@@ -11,22 +11,22 @@ export const Visual = () =>{
 		    <img src="./images/visual_01.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                    <h3>Project Name</h3>
+                      <h3>Project Name</h3>
                         <p>Visal project description Visal project description Visal project description<br/>
-			                <a href="VisualDetail">View More</a> 
+			                    <a href="Visual/1">View More</a> 
                             </p> 
-                            </div>
+                    </div>
                 </div>
         </div>
         <div className={styles.card}>
 		    <img src="./images/visual_02.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                    <h3>Project Name</h3>
+                      <h3>Project Name</h3>
                         <p>Visal project description Visal project description Visal project description<br/>
-                        <a href="VisualDetail">View More</a> 
+                        <a href="Visual/2">View More</a> 
                             </p> 
-                            </div>
+                      </div>
                 </div>
         </div>
         <div className={styles.card}>
@@ -35,7 +35,7 @@ export const Visual = () =>{
                     <div className={styles.desc}>
                     <h3>Project Name</h3>
                         <p>Visal project description Visal project description Visal project description<br/>
-                        <a href="VisualDetail">View More</a> 
+                        <a href="Visual/3">View More</a> 
                             </p> 
                             </div>
                 </div>
@@ -46,7 +46,7 @@ export const Visual = () =>{
                     <div className={styles.desc}>
                     <h3>Project Name</h3>
                         <p>Visal project description Visal project description Visal project description<br/>
-                        <a href="VisualDetail">View More</a> 
+                        <a href="Visual/4">View More</a> 
                             </p> 
                             </div>
                 </div>
@@ -57,7 +57,7 @@ export const Visual = () =>{
                     <div className={styles.desc}>
                     <h3>Project Name</h3>
                         <p>Visal project description Visal project description Visal project description<br/>
-                        <a href="VisualDetail">View More</a> 
+                        <a href="Visual/5">View More</a> 
                             </p> 
                             </div>
                 </div>
@@ -68,19 +68,14 @@ export const Visual = () =>{
                     <div className={styles.desc}>
                     <h3>Project Name</h3>
                         <p>Visal project description Visal project description Visal project description<br/>
-                        <a href="VisualDetail">View More</a> 
+                        <a href="Visual/6">View More</a> 
                             </p> 
-                            </div>
-                </div>
+                         </div>
+                    </div>
+                 </div>
+            </div>
         </div>
-        
-     </div>
- </div>
-  </div>   
-    
-      
-     
-       
+    </div>          
 
        
     )
