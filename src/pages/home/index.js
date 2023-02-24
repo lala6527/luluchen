@@ -1,4 +1,3 @@
-import { PortfolioList } from "../../components/Portfolio/PortfolioList";
 import styles from "./home.module.scss";
 
 export const Home = () => {

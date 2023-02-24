@@ -18,24 +18,6 @@ code {
 }
 
 .container{
-<<<<<<< HEAD
-    width: 1200px;
-    margin: 0 auto;
-;
-    @media (max-width: 767px) {
-      // mobile
-      width: 100%;
-    }
-    @media (min-width: 768px) {
-      // ipad
-      width: 720px;
-    }
-    @media (min-width: 1200px) {
-      // desktop
-      width: 1140px;
-    }
-  }
-=======
   margin: 0 auto;
   max-width: 1280px;
   padding: 0 32px;
@@ -45,4 +27,3 @@ code {
   }
     
 }
->>>>>>> 8ed8ec54ee72d7a980355ada3be8a03026e76bb3

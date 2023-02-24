@@ -18,40 +18,8 @@
         color: #009861;
       }
     }
-<<<<<<< HEAD
-}
-
-    nav{        
-        ul{ display: flex;
-            justify-content: center;
-            list-style: none;
-            gap:32px;
-            margin-top: 10px;
-
-            li{ 
-                font-family: 'Noto Sans';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 28px;
-                text-align: center;
-                text-transform: capitalize;
-
-                a{ 
-                    text-decoration: none;
-                    color: #000;
-                    &:hover{
-                    color:#009861;
-
-                }
-
-            }
-        }
-    }}}
-=======
   }
   button{
     display: none;
   }
 }
->>>>>>> 8ed8ec54ee72d7a980355ada3be8a03026e76bb3
