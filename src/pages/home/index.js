@@ -1,4 +1,6 @@
+import { PortfolioList } from "../../components/portfolio/PortfolioList";
 import styles from "./home.module.scss";
+
 
 export const Home = () => {
   return (
@@ -9,6 +11,10 @@ export const Home = () => {
           Visual designer and foody<br />
           from Tainan, Taiwan.</p>
       </div>
+      <div className={styles.portfolio}>
+      <PortfolioList />
+      </div>
     </div>
   )
 }
+

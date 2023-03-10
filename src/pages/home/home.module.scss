@@ -1,5 +1,6 @@
 
 .home{
+
 .titlePage{
     position: relative;
 img{
@@ -34,19 +35,9 @@ h3 {
     margin-bottom: 60px;
     }
 
-.aPortfolio{  
-    display: flex;
-    justify-content: center;
-    margin-bottom: 129px;
-    a{
-    text-decoration: none;
-    border: black 1px solid;
-    padding:  6px 17px 6px 17px;
-    color: #000;
-}
-    :hover {
-        background-color: black;
-        color: white;
-    }
-}
+    .portfolio{
+        margin: 120px;
+      }
+      
+
 }
