@@ -1,4 +1,4 @@
-import { PortfolioList } from "../../components/portfolio/PortfolioList";
+import { PortfolioList } from "../../components/Portfolio/PortfolioList";
 import styles from "./home.module.scss";
 
 

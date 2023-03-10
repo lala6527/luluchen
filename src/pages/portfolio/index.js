@@ -1,5 +1,5 @@
 
-import { PortfolioList } from "../../components/portfolio/PortfolioList";
+import { PortfolioList } from "../../components/Portfolio/PortfolioList";
 import styles from "./portfolio.module.scss";
 
 export const Portfolio = () =>{
