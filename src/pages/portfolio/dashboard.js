@@ -140,7 +140,7 @@ function Dashboard() {
     <div className="App">
       <AppBar position="relative">
         <Toolbar className={styles.Toolbar}>
-          <Typography variant="h6" color="inherit" noWrap >
+          <Typography variant="h6" noWrap >
             Dashboard
           </Typography>
         </Toolbar>

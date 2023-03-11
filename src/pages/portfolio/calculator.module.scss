@@ -1,40 +1,73 @@
-.wrapper{
-  width: 340px;
-  height: 540px;
-  border-radius: 10px;
-  background: #4e5052;
-  overflow: hidden;
-  margin: 0 auto;
-}
+// button
 
-.screen{
-  height: 100px;
-  color: white;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 32px;
-}
-
-.buttonBox{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 1px;
-  height: calc(100% - 100px);
-}
-
-.btn{
+button {
   border: none;
+  background-color: #7a7b7d;
   font-size: 24px;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   cursor: pointer;
   outline: none;
-  color: white;
-  background-color: #7a7b7d;
 }
 
-.zero{
+button:hover {
+  background-color: #a0a1a3;
+}
+
+.sign {
+  /* grid-column: 3 / 5; */
+  background-color: #ff950c;
+}
+
+.sign:hover {
+  background-color: #d37b09;
+}
+
+.zero {
   grid-column: 1 / span 2;
 }
+
+.func{
+  background-color: #656668;
+}
+
+.func:hover{
+  background-color: #96999d;
+}
+
+// button box
+
+.buttonBox {
+  height: calc(100% - 100px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1px;
+}
+
+// screen
+
+.screen {
+  height: 100px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 10px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  box-sizing: border-box;
+}
+
+// wrapper
+
+.wrapper {
+  width: 340px;
+  height: 540px;
+  border-radius: 10px;
+  background-color: #4E5052;
+  overflow: hidden;
+  margin: 60px auto;
+}
+
