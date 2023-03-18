@@ -15,23 +15,27 @@
 }
 .screen{
     height: 100px;
+    width: 100%;
     color: white;
     padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     font-size: 32px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
+
 
 .buttonBox{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 1px;
+    grid-gap: 1px;
     height: calc(100% - 100px);
 }
 
-.btn{
+.button{
     border: none;
     font-size: 24px;
     font-weight: bold;
@@ -40,6 +44,24 @@
     color: white;
     background-color: #7a7b7d;
 }
+
+button:hover{
+    background-color: #a0a1a3;
+}
+
+.sign{
+    background-color: #ff950c;
+}
+
+.sign:hover{
+    background-color: #d37b09;
+}
 .zero{
     grid-column: 1/span 2;
+}
+.func{
+    background-color: #656668;
+}
+.func:hover{
+    background-color: #96999d;
 }
