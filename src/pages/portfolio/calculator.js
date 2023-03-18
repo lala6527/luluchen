@@ -1,6 +1,19 @@
 import { useState } from "react";
 import styles from "./calculator.module.scss";
 
+const Button = ({ className, children, onClick }) => {
+  return (
+    <button className={className} onClick={onClick}>{children}</button>
+  )
+}
+
+const btnValues = [
+  ["AC", "+/-", "%", "/"],
+  [7, 8, 9, "X"],
+  [4, 5, 6, "-"],
+  [1, 2, 3, "+"],
+  [0, ".", "="],
+];
 
 export const Calculator = (props) => {
 
@@ -10,42 +23,18 @@ export const Calculator = (props) => {
     result: 0, //結果
   });
 
-  const btnValues = [
-    ["AC", "+/-", "%", "/"],
-    [7, 8, 9, "X"],
-    [4, 5, 6, "-"],
-    [1, 2, 3, "+"],
-    [0, ".", "="],
-  ];
-
   // 移除空格的函式
   const removeSpaces = (num) => {
     return num.toString().replace(/\s/g, "");
   }
 
-  const resetClickHanlder = () => {
-    console.log("reset");
-  }
+  // 數學運算的函式
+  const mathOperator = (a, b, sign) => {
 
-  const invertClickHanlder = () => {
-    console.log("invert");
-  }
-
-  const percentClickHanlder = () => {
-    console.log("percent");
-  }
-
-  const signClickHandler = (sign) => {
-    console.log("運算符號");
-  }
-
-  const comaClickHandler = () => {
-    console.log("coma");
   }
 
   // 數字按鈕的點擊事件處理器
   const numClickHandler = (e) => {
-    e.preventDefault();
     const value = e.target.innerHTML;
     if (removeSpaces(calc.num).length < 16) {
       setCalc({
@@ -59,9 +48,36 @@ export const Calculator = (props) => {
     }
   };
 
+  // 重置按鈕的點擊事件處理器
+  const resetClickHanlder = () => {
+    console.log("reset");
+  }
+
+  // 小數點按鈕的點擊事件處理器
+  const comaClickHandler = () => {
+    console.log("coma");
+  }
+
+  // 運算符號按鈕的點擊事件處理器
+  const signClickHandler = (sign) => {
+    console.log("運算符號");
+  }
+
+  // 等於按鈕的點擊事件處理器
   const equalClickHandler = () => {
     console.log("equal");
   }
+
+  // 正負號按鈕的點擊事件處理器
+  const invertClickHanlder = () => {
+    console.log("invert");
+  }
+
+  // 百分比按鈕的點擊事件處理器
+  const percentClickHanlder = () => {
+    console.log("percent");
+  }
+
 
   return (
     <div className="calculator">
@@ -83,11 +99,11 @@ export const Calculator = (props) => {
                         : styles.btn
                 }
                 onClick={
-                  btn == "AC"
+                  btn === "AC"
                     ? resetClickHanlder
-                    : btn == "+/-"
+                    : btn === "+/-"
                       ? invertClickHanlder
-                      : btn == "%"
+                      : btn === "%"
                         ? percentClickHanlder
                         : btn === "/" || btn === "X" || btn === "-" || btn === "+"
                           ? signClickHandler
@@ -96,7 +112,6 @@ export const Calculator = (props) => {
                             : btn === "="
                               ? equalClickHandler
                               : numClickHandler
-
                 }
               >{btn}
               </Button>
@@ -105,11 +120,5 @@ export const Calculator = (props) => {
         </div>
       </div>
     </div>
-
-  )
-}
-export const Button = ({ className, children, onClick }) => {
-  return (
-    <button className={className} onClick={onClick}>{children}</button>
   )
 }
