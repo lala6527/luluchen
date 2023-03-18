@@ -30,7 +30,15 @@ export const Calculator = (props) => {
 
   // 數學運算的函式
   const mathOperator = (a, b, sign) => {
-
+    if (sign === "X") {
+      return a * b;
+    } else if (sign === "/") {
+      return a / b;
+    } else if (sign === "+") {
+      return a + b;
+    } else if (sign === "-") {
+      return a - b;
+    }
   }
 
   // 數字按鈕的點擊事件處理器
@@ -50,34 +58,95 @@ export const Calculator = (props) => {
 
   // 重置按鈕的點擊事件處理器
   const resetClickHanlder = () => {
-    console.log("reset");
+    setCalc({
+      ...calc,
+      sign: "",
+      num: 0,
+      result: 0,
+    })
   }
 
   // 小數點按鈕的點擊事件處理器
-  const comaClickHandler = () => {
-    console.log("coma");
+  const comaClickHandler = (e) => {
+    const value = e.target.innerHTML;
+    if (!calc.num.toString().includes(".")) {
+      setCalc({
+        ...calc,
+        num: calc.num + value
+      })
+    }
   }
 
   // 運算符號按鈕的點擊事件處理器
-  const signClickHandler = (sign) => {
-    console.log("運算符號");
+  const signClickHandler = (e) => {
+    const sign = e.target.innerHTML;
+    const { num, result } = calc;
+    let newResult;
+
+    if (!num) {
+      newResult = result;
+    } else if (!result) {
+      newResult = num;
+    } else {
+      const a = Number(removeSpaces(result));
+      const b = Number(removeSpaces(num));
+      newResult = mathOperator(a, b, sign);
+    }
+    // 更新狀態
+    setCalc({
+      ...calc,
+      sign: sign,
+      result: newResult,
+      num: 0,
+    })
   }
 
   // 等於按鈕的點擊事件處理器
   const equalClickHandler = () => {
-    console.log("equal");
+    if (!calc.sign || !calc.num) return;
+
+    const newResult =
+      calc.num === "0" && calc.sign === "/"
+        ? "Can't divide by 0"
+        : mathOperator(
+          Number(removeSpaces(calc.result)),
+          Number(removeSpaces(calc.num)),
+          calc.sign
+        );
+    // 更新狀態
+    setCalc({
+      ...calc,
+      result: newResult,
+      sign: "",
+      num: 0
+    })
   }
 
   // 正負號按鈕的點擊事件處理器
   const invertClickHanlder = () => {
-    console.log("invert");
+    setCalc({
+      ...calc,
+      num: calc.num ? removeSpaces(calc.num) * -1 : 0,
+      result: calc.result ? removeSpaces(calc.result) * -1 : 0,
+      sign: "",
+    })
+    
   }
 
   // 百分比按鈕的點擊事件處理器
   const percentClickHanlder = () => {
-    console.log("percent");
+    setCalc({
+      ...calc,
+      num: calc.num ? removeSpaces(calc.num) / 100 : 0,
+      result: calc.result ? removeSpaces(calc.result) / 100 : 0,
+      sign: "",
+    })
+    
   }
 
+  const number = "123test";
+  console.log(number % 1 );
+  console.log(isNaN(number));
 
   return (
     <div className="calculator">
