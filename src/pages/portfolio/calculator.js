@@ -3,13 +3,6 @@ import styles from "./calculator.module.scss";
 
 
 
-export const Calculator = (props) =>{
-    const [calc, setCalc] = useState({
-        sign: "",
-        num: 0,
-        result: 0,
-    });
-
     const btnValues=[
         ["AC", "+/-", "%", "/"],
         [7, 8, 9,"x"],
@@ -17,6 +10,16 @@ export const Calculator = (props) =>{
         [1, 2, 3, "+"],
         [0, ".", "="],
         ];
+
+    export const Calculator = (props) =>{
+    const [calc, setCalc] = useState({
+        sign: "",
+        num: 0,
+        result: 0,
+    });
+    const removeSpaces = (num) =>{
+        return num.toString().replace(/\s/g, "");
+    };
 
     const mathOperator = (a, b, sign) =>{
         if(sign === "x"){
@@ -28,72 +31,9 @@ export const Calculator = (props) =>{
         }else if (sign === "-"){
             return a - b;            
         }
-    };
+    }
 
-
-        const removeSpaces = (num) =>{
-            return num.toString().replace(/\s/g, "");
-        };
-
-        const resetClickHanlder = () => {
-            console.log("reset");
-        }
-    
-        const invertClickHander =() =>{
-         setCalc({
-            ...calc,
-            num: calc.num ?removeSpaces(calc.num)*-1 :0,
-            result: calc.result ?removeSpaces(calc.result) *-1 :0,
-            sign: "",
-         })
-        }
-
-        const percentClickHander =() =>{
-           setCalc({
-                ...calc,
-                num: calc.num ?removeSpaces(calc.num) /100 : 0 ,
-                result: calc.result ?removeSpaces(calc.result) /100 : 0,
-                sign: "",
-            })
-           }
-
-
-        const signClickHander =(e) =>{
-            const signClickHander = (e) =>{
-                const sign = e.target.innerHTML;
-                const{ num , result} = calc;
-                let newResult;
-
-                if(!num){
-                    newResult = result;
-                }else if(!result){
-                    newResult = num;
-                }else{
-                    const a = Number(removeSpaces(result));
-                    const b = Number(removeSpaces(num));
-                    newResult =  mathOperator(a, b, sign);
-                }
-                setCalc({
-                    ...calc,
-                    sign:sign,
-                    result:newResult,
-                    num:0,
-                })
-            }
-            
-        }
-        const comaClickHander =(e) =>{
-            const value = e.target.innerHTML;
-            if(!calc.num.toString().includes(".")){
-                setCalc({
-                    ...calc,
-                    num: calc.num + value
-                })
-            }
-          }
-    
-       
-        const numClickHander =(e) =>{
+   const numClickHandler =(e) =>{
             e.preventDefault();
             const value = e.target.innerHTML;
             if(removeSpaces(calc.num).length < 16){
@@ -107,6 +47,45 @@ export const Calculator = (props) =>{
                 });
             }
         };
+        const resetClickHandler = () => {
+            setCalc({
+                ...calc,
+                sign: "",
+                num: 0,
+                result: 0,
+            })
+        }
+        const comaClickHandler =(e) =>{
+        const value = e.target.innerHTML;
+            if(!calc.num.toString().includes(".")){
+                setCalc({
+                    ...calc,
+                    num: calc.num + value
+                })
+            }
+          }
+
+        const signClickHandler =(e) =>{
+            const sign = e.target.innerHTML;
+            const{ num , result} = calc;
+                let newResult;
+
+                if(!num){
+                    newResult = result;
+                }else if(!result){
+                    newResult = num;
+                }else{
+                    const a = Number(removeSpaces(result));
+                    const b = Number(removeSpaces(num));
+                    newResult =  mathOperator(a, b, sign);
+                }
+                setCalc({
+                    ...calc,
+                    sign: sign,
+                    result: newResult,
+                    num:0,
+                })
+        }
 
         const equalClickHandler = () =>{
             if(!calc.sign || !calc.num)return;
@@ -126,9 +105,33 @@ export const Calculator = (props) =>{
                 num: 0
             })
         }
+
+        const invertClickHandler =() =>{
+         setCalc({
+            ...calc,
+            num: calc.num ?removeSpaces(calc.num)*-1 :0,
+            result: calc.result ?removeSpaces(calc.result) *-1 :0,
+            sign: "",
+         })
+        }
+
+        const percentClickHandler =() =>{
+           setCalc({
+                ...calc,
+                num: calc.num ?removeSpaces(calc.num) /100 : 0 ,
+                result: calc.result ?removeSpaces(calc.result) /100 : 0,
+                sign: "",
+            })
+           }
+
+
+        
+     
+
+   
         return(
         <div className="calculator">
-            <h1 className={styles.h1}>Calculator</h1>
+            <h6 className={styles.h6}>Calculator</h6>
             <div className={styles.wrapper}>
                 <div className={styles.screen}>{calc.num || calc.result}</div>
                 <div className={styles.buttonBox}>
@@ -145,18 +148,19 @@ export const Calculator = (props) =>{
                             ?styles.zero
                             :styles.btn
                             }
+
                             onClick={
-                                btn == "AC"
-                                ?resetClickHanlder
-                                :btn == "+/-"
-                                ?invertClickHander
+                                btn === "AC"
+                                ?resetClickHandler
+                                :btn === "+/-"
+                                ?invertClickHandler
                                 :btn =="%"
-                                ?percentClickHander
-                                :btn === "/" || btn === "X" ||btn === "-"||btn === "+"
-                                ?signClickHander
+                                ?percentClickHandler
+                                :btn === "/" || btn === "x" ||btn === "-"||btn === "+"
+                                ?signClickHandler
                                 :btn === "="
                                 ?equalClickHandler
-                                :numClickHander
+                                :numClickHandler
                             }
                             >{btn}
                           </Button>

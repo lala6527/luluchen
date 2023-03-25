@@ -79,7 +79,7 @@ function Dashboard() {
     labels: ["三月", "四月", "五月", "六月", "七月", "八月", "九月"],
     datasets: [
       {
-        label: "蝦皮",
+        label: "快點購",
         data: [1068, 1037, 992, 813, 1043, 1848, 1310],
         borderColor: 'blue',
         tension: 0,
@@ -89,7 +89,7 @@ function Dashboard() {
         showLine: true,
       },
       {
-        label: "PCHome",
+        label: "快樂購",
         data: [716, 976, 918, 793, 964, 1033, 953],
         borderColor: 'black',
         tension: 0,
@@ -113,12 +113,12 @@ function Dashboard() {
     labels: ["四月", "五月", "六月", "七月", "八月", "九月"],
     datasets: [
       {
-        label: "蝦皮",
+        label: "快點購",
         data: [300, 400, 500, 600, 700, 800],
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
-        label: "PCHome",
+        label: "快樂購",
         data: [250, 300, 350, 400, 450, 500],
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       }
@@ -138,7 +138,7 @@ function Dashboard() {
   };
   return (
     <div className="App">
-      <AppBar position="relative">
+      <AppBar position="relative" sx={{backgroundColor: "#69A8aa"}}>
         <Toolbar className={styles.Toolbar}>
           <Typography variant="h6" color="inherit" noWrap >
             Dashboard
@@ -146,7 +146,7 @@ function Dashboard() {
         </Toolbar>
       </AppBar>
       <Container>
-        <Typography variant="h6" color="inherit" noWrap sx={{my: 2}}>
+        <Typography variant="h6" noWrap sx={{my: 2}}>
         </Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} md={6}>
@@ -155,7 +155,6 @@ function Dashboard() {
                 <Radar options={optionsRadar} data={dataRadar} />
               </CardContent>
               <CardActions>
-                <Button size="small">View</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -165,7 +164,6 @@ function Dashboard() {
                 <Doughnut options={optionsDoughnut} data={dataDoughnut} />
               </CardContent>
               <CardActions>
-                <Button size="small">View</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -175,7 +173,6 @@ function Dashboard() {
                 <Line options={optionsLine} data={dataLine} />
               </CardContent>
               <CardActions>
-                <Button size="small">View</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -185,7 +182,6 @@ function Dashboard() {
                 <Bar options={optionsBar} data={dataBar} />
               </CardContent>
               <CardActions>
-                <Button size="small">View</Button>
               </CardActions>
             </Card>
           </Grid>

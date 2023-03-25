@@ -9,84 +9,84 @@ export const VisualDetail = () =>{
    switch (params.vid){
     case "1":
         content ={
-            background:"/images/visual_01.png",
-            title:"Project Name 1",
+            background:"/images/visual01.png",
+            title:"蜂與鳥",
             summary:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "營造出柔和、輕盈的氛圍，與酒體有相呼應，凸顯商品特色。",
             subtitle:"Background",
             content:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-            img:"/images/visual_01.png",
+            img:"/images/visual01.png",
             subtitleOne:"Reflection",
             contentOne:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         };
         break;
         case "2":
             content ={
-                background:"/images/visual_02.png",
+                background:"/images/visual02.png",
                 title:"Project Name 2",
                 summary:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                 subtitle:"Background",
                 content:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-                img:"/images/visual_02.png",
+                img:"/images/visual02.png",
                 subtitleOne:"Reflection",
                 contentOne:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             };
             break;
             case "3":
                 content ={
-                    background:"/images/visual_03.png",
+                    background:"/images/visual03.png",
                     title:"Project Name 3",
                     summary:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                     subtitle:"Background",
                     content:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-                    img:"/images/visual_03.png",
+                    img:"/images/visual03.png",
                     subtitleOne:"Reflection",
                     contentOne:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                 };
                 break;
                 case "4":
                     content ={
-                        background:"/images/visual_04.png",
+                        background:"/images/visual04.png",
                         title:"Project Name 4",
                         summary:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                         subtitle:"Background",
                         content:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-                        img:"/images/visual_04.png",
+                        img:"/images/visual04.png",
                         subtitleOne:"Reflection",
                         contentOne:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                     };
                     break;
                     case "5":
                         content ={
-                            background:"/images/visual_05.png",
+                            background:"/images/visual05.png",
                             title:"Project Name 5",
                             summary:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                             subtitle:"Background",
                             content:
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-                            img:"/images/visual_05.png",
+                            img:"/images/visual05.png",
                             subtitleOne:"Reflection",
                             contentOne:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                         };
                         break;
                         case "6":
                             content ={
-                                background:"/images/visual_06.png",
+                                background:"/images/visual06.png",
                                 title:"Project Name 6",
                                 summary:
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                                 subtitle:"Background",
                                 content:
                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-                                img:"/images/visual_06.png",
+                                img:"/images/visual06.png",
                                 subtitleOne:"Reflection",
                                 contentOne:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                             };
