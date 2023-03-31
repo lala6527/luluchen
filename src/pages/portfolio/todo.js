@@ -53,7 +53,7 @@ export const Todo = () =>{
    return(
 
     <div>
-      <h1 className={styles.h1}>Todo List</h1>
+      <h6 className={styles.h6}>Todo List</h6>
       <div className={styles.grid}>
       <div className={styles.actions}>
       <label htmlFor="name">

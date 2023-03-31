@@ -1,7 +1,15 @@
 .visualDetailItem {
+	width: 1000px;
+	margin: 0px auto;
+
 	img {
-		width: 100%;
+		display: block;
+		margin: 0px auto;
+		width:600px;
+		margin-top: 48px;
+		border-radius: 10px;
 	}
+	
 	.visualTitle {
 		font-family: "Noto Sans";
 		font-style: normal;

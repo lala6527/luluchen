@@ -1,9 +1,18 @@
-.h1{
-  text-align:center;
-  margin: 60px 0 120px 0;
+.h6{
+  padding: 16px 24px;
+  margin: 0;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   background-color: #69A8aa;
-  padding: 20px;
-  color:white;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  
 }
 
 .grid{
