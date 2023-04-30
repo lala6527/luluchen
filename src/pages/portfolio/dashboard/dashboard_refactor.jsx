@@ -220,7 +220,7 @@ const storeData = [
   }
 ];
 
-export const Dashboard = () => {
+export const DashboardRefactor = () => {
   const [store, setStore] = useState(storeData[0]);
 
   // Radar Chart
@@ -247,13 +247,24 @@ export const Dashboard = () => {
     },
   };
 
+  // 這段程式碼用來計算每個產品類別(category)的數量(quantity)，
+  // 並將結果儲存在一個物件(quantityByCategory)中。
+
+  // 使用 reduce() 方法對 store.products 陣列進行迭代，
+  // acc 參數代表累積器，一開始的值為空物件 {}。
   const quantityByCategory = store.products.reduce((acc, product) => {
+    // 如果 acc 物件中不存在當前產品(product)的類別(category)屬性，
+    // 則在 acc 中新增一個以該類別為鍵(key)、數量為零的屬性。
     if (!acc[product.category]) {
       acc[product.category] = 0;
     }
+    // 將當前產品的數量(quantity)加到對應類別(category)的屬性值上。
     acc[product.category] += product.quantity;
+    // 回傳更新後的 acc 物件，以便下一次迭代使用。
     return acc;
   }, {});
+
+  // 最後，quantityByCategory 物件將包含所有產品類別的數量總和。
 
   // Doughnut Chart
   const dataDoughnut = {
@@ -292,6 +303,7 @@ export const Dashboard = () => {
       },
     },
   };
+
   const dataLine = {
     labels: store.traffic.map((item) => item.month),
     datasets: [
@@ -328,6 +340,7 @@ export const Dashboard = () => {
       },
     },
   };
+
   const dataBar = {
     labels: store.traffic.map((item) => item.month),
     datasets: [
@@ -367,7 +380,7 @@ export const Dashboard = () => {
         </div>
       </AppBar>
       <div className="container">
-        <Box sx={{ display: "flex", my: 4, justifyContent:"space-between" }}>
+        <Box sx={{ display: "flex", my: 4, justifyContent: "space-between" }}>
           <FormControl sx={{ minWidth: 120 }}>
             <InputLabel id="demo-simple-select-label">店家</InputLabel>
             <Select

@@ -3,8 +3,10 @@ import { Header, Footer } from "./components";
 import { Home, Portfolio, About, Visual } from "./pages";
 import { VisualDetail } from "./pages/visual/detail";
 import { Dashboard } from "./pages/portfolio/dashboard";
+import { DashboardRefactor } from "./pages/portfolio/dashboard/dashboard_refactor";
 import { Todo } from "./pages/portfolio/todo";
 import { Calculator } from "./pages/portfolio/calculator";
+import { Test } from "./pages/test";
 
 import "./App.scss";
 
@@ -17,10 +19,12 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/todo" element={<Todo />} />
         <Route path="/portfolio/dashboard" element={<Dashboard />} />
+        <Route path="/portfolio/dashboard_refactor" element={<DashboardRefactor />} />
         <Route path="/portfolio/calculator" element={<Calculator />} />
         <Route path="/about" element={<About />} />
         <Route path="/visual" element={<Visual />} />
         <Route path="/visual/:vid" element={<VisualDetail />} />
+        <Route path="/test" element={<Test />} />
       </Routes>      
       <Footer />
     </BrowserRouter>
