@@ -27,8 +27,8 @@ export const Visual = () => {
 		    <img src="./images/visual02.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                      <h3>Project Name</h3>
-                        <p>Visal project description Visal project description Visal project description<br/>
+                      <h3>三隻猴子</h3>
+                        <p>夏日森林和靈動的猴子，營造出了一種自然、活潑、有趣的氛圍。<br/>
                         <a href="Visual/2">View More</a> 
                             </p> 
                       </div>
@@ -38,8 +38,8 @@ export const Visual = () => {
 		    <img src="./images/visual03.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                    <h3>Project Name</h3>
-                        <p>Visal project description Visal project description Visal project description<br/>
+                    <h3>甜柑橘氣泡酒</h3>
+                        <p>在炎炎夏日里感受到一絲涼爽，提升整個夏天的美好感受。<br/>
                         <a href="Visual/3">View More</a> 
                             </p> 
                             </div>
@@ -49,8 +49,8 @@ export const Visual = () => {
 		    <img src="./images/visual04.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                    <h3>Project Name</h3>
-                        <p>Visal project description Visal project description Visal project description<br/>
+                    <h3>西班牙醜醜熱紅酒</h3>
+                        <p>夏日飲用新哲學 清新沁涼好滋味。不同於傳統夏日飲料的美妙口感。<br/>
                         <a href="Visual/4">View More</a> 
                             </p> 
                             </div>
@@ -60,8 +60,8 @@ export const Visual = () => {
 		    <img src="./images/visual05.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                    <h3>Project Name</h3>
-                        <p>Visal project description Visal project description Visal project description<br/>
+                    <h3>查理斯香檳經典系列</h3>
+                        <p>散發著獨特的氣息和風味，充滿奢華和精緻的品味世界。<br/>
                         <a href="Visual/5">View More</a> 
                             </p> 
                             </div>
@@ -71,8 +71,8 @@ export const Visual = () => {
 		    <img src="./images/visual06.png" />
                 <div className={styles.info}>
                     <div className={styles.desc}>
-                    <h3>Project Name</h3>
-                        <p>Visal project description Visal project description Visal project description<br/>
+                    <h3>幾米聯名酒款</h3>
+                        <p>溫馨的氛圍，在忙碌的生活中獲得一絲絲的溫暖和安慰。<br/>
                         <a href="Visual/6">View More</a> 
                             </p> 
                          </div>
