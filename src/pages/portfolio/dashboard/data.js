@@ -1,7 +1,7 @@
 export const storeData = [
     {
       storeId: 1,
-      storeName: 'Apple',
+      storeName: 'PP塑崩褲',
       updateDate: '2021-10-01',
       rating: [20, 18, 16, 0, 2, 10],
       traffic: [
@@ -88,7 +88,7 @@ export const storeData = [
     },
     {
       storeId: 2,
-      storeName: 'Jvita結為塔',
+      storeName: 'Jvita潔薇塔',
       updateDate: '2021-10-01',
       rating: [6, 5, 34, 23, 2, 1],
       traffic: [

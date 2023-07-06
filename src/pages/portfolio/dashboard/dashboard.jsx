@@ -180,106 +180,6 @@ const quantityByCategory = store.products.reduce((acc,product) => {
   const changeStore = (event) => {
     setStore(storeData.find((store) => store.storeId === event.target.value));
  };
-//   console.log(store)
-
-// const dataDoughnut = {
-//   labels:[...new Set(store.products.map((product) => product.category))],
-//   datasets:[
-//     {
-//       data: Object.values(quantityByCategory),
-//       backgroundColor: 
-//       ['rgba(105, 168, 170, 0.2)',
-//       'rgba(54, 162, 235, 0.2)',
-//       'rgba(255, 206, 86, 0.2)',
-//       'rgba(75, 192, 192, 0.2)',
-//       'rgba(153, 102, 255, 0.2)',
-//       'rgba(255, 159, 64, 0.2)',
-//     ],
-//     borderColor: [
-//       'rgba(105, 168, 170, 1)',
-//       'rgba(54, 162, 235, 1)',
-//       'rgba(255, 206, 86, 1)',
-//       'rgba(75, 192, 192, 1)',
-//       'rgba(153, 102, 255, 1)',
-//       'rgba(255, 159, 64, 1)',
-//     ],
-//     borderWidth: 1,
-//     },
-//   ],
-// };
-// const optionsDoughnut = {
-//   responsive: true,
-//       plugins: {
-//         title: {
-//           display: true,
-//           text: '商品分類',
-//           align: "start",
-//         },
-//       },
-//     };
-// const dataLine ={
-//   labels: store.traffic.map((item) => item.month),
-//   dataset:[
-//     {
-//       label:"visitors",
-//       data:store.traffic.map((item) => item.visitors),
-//       borderColor:'rgba(105, 168, 170, 1)',
-//       tension: 0,
-//       pointStyle: 'rect',
-//       pointBorderColor: 'rgba(105, 168, 170, 1)',
-//       pointBackgroundColor: '#fff',
-//       showLine: true,
-//     },
-//     {
-//       label: "pageviews",
-//       data: store.traffic.map((item) => item.pageviews),
-//       borderColor: 'black',
-//       tension: 0,
-//       pointStyle: 'rect',
-//       pointBorderColor: 'black',
-//       pointBackgroundColor: '#fff',
-//       showLine: true
-//     }
-//   ]
-// }
-// const optionsLine = {
-//   responsive: true,
-//   aspectRatio: 1,
-//   plugins: {
-//     title: {
-//       display: true,
-//       text: '流量',
-//       align: "start",
-//     },
-//   },
-// };
-
-// const dataBar = {
-//       labels: store.traffic.map((item) =>item.month),
-//       datasets:[
-//         {
-//           label: "訂單",
-//           data: store.orders.map((item) => item.sales),
-//           backgroundColor:'rgba(105, 168, 170, 1)',
-//         },
-//       ],
-//     };
-
-//  const optionsBar = {
-//       responsive: true,
-//       aspectRatio: 1,
-//       plugins: {
-//         title: {
-//           display: true,
-//           text: '訂單量',
-//           align: "start",
-//         },
-//       },
-//     };
-
-// const changeStore = (event) =>{
-//   setStore(storeData.find ((store) => store.storeId === event.target.value));
-// };
 
 return(
   <div className="App">
@@ -297,19 +197,20 @@ return(
 <Box sx={{ display: "flex", my: 4, justifyContent: "space-between" }}>
   <FormControl sx={{minWidth:120}}>
     <InputLabel id="demo-simple-select-label">店家</InputLabel>
+    
     <Select
     label={store.storeName}
     value={store.storeId}
     onChange={changeStore}
     >
-      {storeData.map((store)=>{
+      {storeData.map((store)=>(
         <MenuItem key={store.storeId} value={store.storeId}>
-          {store.storeName}
+         {store.storeName}
         </MenuItem>
-      })}
+      ))}
     </Select>
   </FormControl>
-  <p>資料時間:{store.updateData}</p>
+  <p>資料時間:{store.updateDate}</p>
 </Box>
 
 <Grid container spacing={4}>
@@ -354,3 +255,4 @@ return(
 </div>
 );
  }
+
