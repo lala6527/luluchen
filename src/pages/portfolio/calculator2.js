@@ -8,7 +8,7 @@ export const Calculator2 = () => {
           <img src="/images/status icons.png" className="w-[61px] h-[14px]  m-4 mr-[14px]" />
         </div>
         <div className="flex justify-around">
-          <div className="h-[48px] w-[104px] bg-[#F9F9F9] flex justify-around flex items-center rounded-[20px]">
+          <div className="h-7 w-[104px] bg-[#F9F9F9] flex justify-around flex items-center rounded-[20px]">
             <img src="/images/sun icon.png" className="w-6 h-6 " />
             <img src="/images/moon icon.png" className="w-6 h-6 " />
           </div>
@@ -21,7 +21,7 @@ export const Calculator2 = () => {
             <div className="p-9 bg-[#F7F7F7] rounded-[20px] text-[#7DD0C5]">AC</div>
             <div className="p-9 bg-[#F7F7F7] rounded-[20px] text-[#7DD0C5]">+/-</div>
             <div className="p-9 bg-[#F7F7F7] rounded-[20px] text-[#7DD0C5]">%</div>
-            <div className="p-9 bg-[#F7F7F7] rounded-[20px] text-[#EB6B6D]">/</div>
+            <div className="p-9 bg-[#F7F7F7] rounded-[20px] text-red-500">/</div>
             <div className="p-9 bg-[#F7F7F7] rounded-[20px]">7</div>
             <div className="p-9 bg-[#F7F7F7] rounded-[20px]">8</div>
             <div className="p-9 bg-[#F7F7F7] rounded-[20px]">9</div>

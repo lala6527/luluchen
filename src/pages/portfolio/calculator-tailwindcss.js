@@ -1,3 +1,4 @@
+import { dark } from "@material-ui/core/styles/createPalette";
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -15,6 +16,9 @@ export const CalculatorTailwindCSS = (props) => {
     num: 0,
     result: 0,
   });
+
+  const [darkMode, setDarkMode] = useState(false);
+
   const removeSpaces = (num) => {
     return num.toString().replace(/\s/g, "");
   };
@@ -122,63 +126,72 @@ export const CalculatorTailwindCSS = (props) => {
     })
   }
 
+  console.log("darkmode", darkMode);
+
   return (
-    <div>
-      <div className="w-[480px] rounded-lg bg-white overflow-auto mx-auto shadow">
-        <div className="flex justify-between p-3 text-xs">
-          <span>9:41</span>
-          <img src="/images/status icons.png" className="h-3" />
-        </div>
-        <div className="flex justify-center">
-          <div className="inline-flex gap-6 p-3 rounded-full bg-zinc-100">
-            <img src="/images/sun icon.png" className="w-6 h-6 " />
-            <img src="/images/moon icon.png" className="w-6 h-6 " />
-          </div>
-        </div>
-        <div className="h-[200px] w-full flex items-end justify-end text-black text-5xl p-10">
-          {calc.num || calc.result}
-        </div>
-        <div className="grid grid-cols-4 grid-rows-5 h-[calc(100%)] gap-3 p-5 bg-zinc-50">
-          {btnValues.flat().map((btn, i) => {
-            const commonBtnClass = "bg-zinc-100 rounded-lg text-white text-xl py-8 hover:bg-gray-300 text-black";
-            let additionalClass = "";
-            if (btn === "AC" || btn === "+/-" || btn === "%") {
-              additionalClass = "text-teal-400";
-            } else if (btn === "/" || btn === "x" || btn === "-" || btn === "+" || btn === "=") {
-              additionalClass = "text-red-500";
-            } else if (btn === 0) {
-              additionalClass = "col-span-2";
-            }
-            const btnClassName = twMerge(commonBtnClass, additionalClass);
-            return (
-              <Button
-                key={`btn-${i}`}
-                className={btnClassName}
-                onClick={
-                  btn === "AC"
-                    ? resetClickHandler
-                    : btn === "+/-"
-                      ? invertClickHandler
-                      : btn === "%"
-                        ? percentClickHandler
-                        : btn === "/" || btn === "x" || btn === "-" || btn === "+"
-                          ? signClickHandler
-                          : btn === "="
-                            ? equalClickHandler
-                            : btn === "."
-                              ? comaClickHandler
-                              : numClickHandler
-                }
-              >
-                {btn}
-              </Button>
-            );
-          })}
+    <div className={`w-[480px] rounded-lg overflow-hidden mx-auto shadow 
+    ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+      <div className="flex justify-between p-3 text-xs">
+        <span>9:41</span>
+        {darkMode ? (
+          <img src="/images/status_dark.png" className="h-3" />
+        ):(
+          <img src="/images/status_icons.png" className="h-3" />
+        )}
+      </div>
+      <div className="flex justify-center">
+        <div className={`inline-flex gap-6 p-3 rounded-full cursor-pointer 
+      ${darkMode} ? "bg-zinc-900" : "bg-zinc-100"`}>
+          {darkMode ? (
+            <img src="/images/sun_dark.png" className="w-6 h-6" onClick={() => setDarkMode(false)} />
+          ) : (
+            <img src="/images/sun_icon.png" className="w-6 h-6" onClick={() => setDarkMode(false)} />
+          )}
+          <img src="/images/moon_icon.png" className="w-6 h-6" onClick={() => setDarkMode(true)} />
         </div>
       </div>
-    </div>
-  );
-};
+      <div className="h-[260px] w-full p-10 flex items-end justify-end text-4xl font-bold">{calc.num || calc.result}</div>
+      <div className={`grid grid-cols-4 grid-rows-5 gap-3 h-[calc(100%)] p-5 
+      ${darkMode} ? "bg-zinc-900" : "bg-zinc-50"`}>
+        {btnValues.flat().map((btn, i) => {
+          const commonBtnClass = `rounded-lg text-xl py-8 
+          ${darkMode ? "text-white bg-zinc-900 hover:bg-zinc-700" : "text-black bg-zinc-100 hover:bg-gray-300"}`;
+          let additionalClass = "";
+          if (btn === "AC" || btn === "+/-" || btn === "%") {
+            additionalClass = "text-teal-400";
+          } else if (btn === "/" || btn === "x" || btn === "-" || btn === "+" || btn === "=") {
+            additionalClass = "text-red-500";
+          } else if (btn === 0) {
+            additionalClass = "col-span-2";
+          }
+          const btnClassName = twMerge(commonBtnClass, additionalClass);
+          return (
+            <Button
+              key={`btn-${i}`}
+              className={btnClassName}
+              onClick={
+                btn === "AC"
+                  ? resetClickHandler
+                  : btn === "+/-"
+                    ? invertClickHandler
+                    : btn == "%"
+                      ? percentClickHandler
+                      : btn === "/" || btn === "x" || btn === "-" || btn === "+"
+                        ? signClickHandler
+                        : btn === "="
+                          ? equalClickHandler
+                          : btn === "."
+                            ? comaClickHandler
+                            : numClickHandler
+              }
+            >{btn}
+            </Button>
+          )
+        })}
+      </div>
+    </div >
+  )
+}
 export const Button = ({ className, onClick, children }) => {
   return (
     <button className={className} onClick={onClick}>{children}</button>
