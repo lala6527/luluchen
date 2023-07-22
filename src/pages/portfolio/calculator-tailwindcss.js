@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./calculator.module.scss";
+import { twMerge } from "tailwind-merge";
 
 const btnValues = [
   ["AC", "+/-", "%", "/"],
@@ -9,7 +9,7 @@ const btnValues = [
   [0, ".", "="],
 ];
 
-export const Calculator = (props) => {
+export const CalculatorTailwindCSS = (props) => {
   const [calc, setCalc] = useState({
     sign: "",
     num: 0,
@@ -123,30 +123,43 @@ export const Calculator = (props) => {
   }
 
   return (
-    <div className="calculator">
-      <h6 className={styles.h6}>Calculator</h6>
-      <div className={styles.wrapper}>
-        <div className={styles.screen}>{calc.num || calc.result}</div>
-        <div className={styles.buttonBox}>
+    <div>
+      <div className="w-[480px] rounded-lg bg-white overflow-auto mx-auto shadow">
+        <div className="flex justify-between p-3 text-xs">
+          <span>9:41</span>
+          <img src="/images/status icons.png" className="h-3" />
+        </div>
+        <div className="flex justify-center">
+          <div className="inline-flex gap-6 p-3 rounded-full bg-zinc-100">
+            <img src="/images/sun icon.png" className="w-6 h-6 " />
+            <img src="/images/moon icon.png" className="w-6 h-6 " />
+          </div>
+        </div>
+        <div className="h-[200px] w-full flex items-end justify-end text-black text-5xl p-10">
+          {calc.num || calc.result}
+        </div>
+        <div className="grid grid-cols-4 grid-rows-5 h-[calc(100%)] gap-3 p-5 bg-zinc-50">
           {btnValues.flat().map((btn, i) => {
+            const commonBtnClass = "bg-zinc-100 rounded-lg text-white text-xl py-8 hover:bg-gray-300 text-black";
+            let additionalClass = "";
+            if (btn === "AC" || btn === "+/-" || btn === "%") {
+              additionalClass = "text-teal-400";
+            } else if (btn === "/" || btn === "x" || btn === "-" || btn === "+" || btn === "=") {
+              additionalClass = "text-red-500";
+            } else if (btn === 0) {
+              additionalClass = "col-span-2";
+            }
+            const btnClassName = twMerge(commonBtnClass, additionalClass);
             return (
               <Button
                 key={`btn-${i}`}
-                className={
-                  (btn === "/" || btn === "x" || btn === "-" || btn === "+" || btn === "=")
-                    ? styles.sign
-                    : (btn === "AC" || btn === "+/-" || btn === "%")
-                      ? styles.func
-                      : (btn === 0)
-                        ? styles.zero
-                        : styles.btn
-                }
+                className={btnClassName}
                 onClick={
                   btn === "AC"
                     ? resetClickHandler
                     : btn === "+/-"
                       ? invertClickHandler
-                      : btn == "%"
+                      : btn === "%"
                         ? percentClickHandler
                         : btn === "/" || btn === "x" || btn === "-" || btn === "+"
                           ? signClickHandler
@@ -156,15 +169,16 @@ export const Calculator = (props) => {
                               ? comaClickHandler
                               : numClickHandler
                 }
-              >{btn}
+              >
+                {btn}
               </Button>
-            )
+            );
           })}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 export const Button = ({ className, onClick, children }) => {
   return (
     <button className={className} onClick={onClick}>{children}</button>
