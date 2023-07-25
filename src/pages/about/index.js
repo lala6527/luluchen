@@ -6,7 +6,9 @@ export const About = () => {
         <div className="container">
             <div className={styles.about}>
             <section>
-              <img src="images/photo.png" alt="照片" />
+              <div className="photo">              
+                <img src="images/photo.png" alt="照片" />
+              </div>
               <div className={styles.flexItem}> 
               <h3>Hey, I’m Lulu. Nice to meet you!</h3>
                 <p>嗨! 我是季涵，個性友善、真誠，做事認真專注，有很強的責任心，學習能力與適應能力強，十分重視團隊精神，在能力範圍內會把每一件事做到最好! 
