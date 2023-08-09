@@ -2,7 +2,14 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+
   theme: {
+    extend: {
+      colors: {
+        'gray': '#7D7D7D',
+      },
+    },
+  },
     screens: {
       'sm': {'min':'320px','max':'720px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
@@ -18,8 +25,9 @@ module.exports = {
 
       '2xl': {'min': '1536px'},
       // => @media (min-width: 1536px) { ... }
-    }
-  },
+    },
+  
+
   plugins: [],
-}
+    };
 
