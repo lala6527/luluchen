@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "../../components/Button";
-import styles from "./todo.module.scss";
+import styles from "./styles/tailwind.css";
 
 export const Todo = () =>{
   const [todos, setTodos] = useState([]);
@@ -53,30 +53,33 @@ export const Todo = () =>{
    return(
 
     <div>
-      <h6 className={styles.h6}>Todo List</h6>
-      <div className={styles.grid}>
-      <div className={styles.actions}>
-      <label htmlFor="name">
-      <span>名稱：</span>
-      <input type ="text" id="name" ref={inputNameRef} />
-      {errorDate && (<span className={styles.error}>{errorName}</span>)}
+      <h6 className="m-0 px-4 py-8 font-sans font-medium text-xl tracking-wider leading-relaxed 
+      overflow-hidden text-ellipsis whitespace-nowrap bg-[#69A8aa] text-white shadow-sm">Todo List</h6>
+      <div className="grid grid-cols-2 gap-5 m-7">
+      <div className="bg-[#eeeeee] p-7">
+      <label htmlFor="name" className="flex flex-col mx-0 my-5">
+      <span className="mt-2">名稱：</span>
+      <input type ="text" id="name" ref={inputNameRef} className="p-2" />
+      {errorDate && (<span className="mt-2 text-red">{errorName}</span>)}
       </label>
-      <label htmlFor="date">
-      <span>預計完成日期：</span>
-      <input type="date" id="date" ref={inputDateRef} />
-      {errorDate &&(<span className={styles.error}>{errorDate}</span>)}
+      <label htmlFor="date" className="flex flex-col mx-0 my-5">
+      <span className="mt-2">預計完成日期：</span>
+      <input type="date" id="date" ref={inputDateRef} className="p-2"/>
+      {errorDate &&(<span className="mt-2 text-red">{errorDate}</span>)}
       </label>
-      <Button onClick={handleAdd}>新增</Button>
+      <Button onClick={handleAdd} className="w-full">新增</Button>
       </div>
 
-      <div className={styles.todos}>
+      <div className="">
         {todos.map((item,index ) =>{
           let tag =item.state ? "已完成" : "未完成";
           return(
-            <div className={styles.todo} key={`todo-${index}`}>
-            <h3>
+            <div className="border-solid-[-[#243c5a] p-5 rounded-xl mb-5" key={`todo-${index}`}>
+            <h3 className="mt-0 flex justify-between">
               <span>{item.id}.{item.name}</span>
-              <span className={item.states ? styles.finish :styles.tag}>{tag}</span>
+              <span className={item.states ? 
+              "align-top inline-block ml-2 bg-[#69A8aa] text-white p-1 text-xs rounded"
+              :styles.tag}>{tag}</span>
             </h3>
             <p>{item.state ? "完成日期: " : "預計完成日期:"}{item.dueDate}</p>
             {!item.state && (<Button onClick={() =>handleFinish (item.id)}>完成</Button>)}

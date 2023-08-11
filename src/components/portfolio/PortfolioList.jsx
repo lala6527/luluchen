@@ -1,5 +1,5 @@
 import {Link } from 'react-router-dom';
-import styles from './portfolio.module.scss';
+import styles from "./styles/tailwind.css";
 
 const portfolio = [
   {
@@ -30,21 +30,23 @@ export const PortfolioList = () => {
     <section>
       {portfolio.map((item) => {
         return (
-          <figure key={`portfolio-${item.name}`} className={styles.portfolioItem}>
-            <Link to={item.link} className={styles.img}>
+          <figure key={`portfolio-${item.name}`} className="mt-4 flex-row-reverse leading-6">
+            <Link to={item.link} className="w-2/3">
+              <div className="w-full">
               <img src={item.img} alt={item.title} />
+              </div>
             </Link>
-            <figcaption>
-              <h2>{item.name}</h2>
-              <p>{item.summary}</p>
-              <div className={styles.tags}>
+            <figcaption className="w-1/3 pr-12">
+              <h2 className="text-base mx-0 mt-0 mb-7">{item.name}</h2>
+              <p className=" mx-0 mt-0 mb-7 text-gray">{item.summary}</p>
+              <div className="mr-1 bg-white text-xs px-1 py-2 rounded-lg">
                 {item.tag.map((tag) => {
                   return (
-                    <span key={`tag-${tag}`}>{tag}</span>
+                    <span key={`tag-${tag}`} className="mr-4 bg-[#d9d9d9] text-sm px-1 py-2 rounded">{tag} </span>
                   )
                 })}
               </div>
-              <Link to={item.link}>View detail</Link>
+              <Link to={item.link} className="block mt-5 text-[#009861] no-underline">View detail</Link>
             </figcaption>
           </figure>
         )
