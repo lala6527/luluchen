@@ -5,6 +5,7 @@ import { VisualDetail } from "./pages/visual/detail";
 import { Dashboard } from "./pages/portfolio/dashboard/dashboard";
 import { Todo } from "./pages/portfolio/todo";
 import { Calculator } from "./pages/portfolio/calculator";
+import "./styles/tailwind.css";
 import "./App.scss";
 
 const App = () => {

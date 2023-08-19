@@ -1,4 +1,4 @@
-import { PortfolioList } from "../../components/Portfolio/portfolioList";
+import { PortfolioList } from "../../components/Portfolio/PortfolioList";
 import styles from "./styles/tailwind.css";
 
 
