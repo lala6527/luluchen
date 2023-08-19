@@ -30,9 +30,9 @@ const visualData = [
     link: 'Visual/5'
   },
   {
-    name: '酒醉的葡萄',
+    name: '幾米聯名酒款',
     img: './images/visual06.png',
-    desc: '葡萄酒的酒體與葡萄的形狀相呼應，營造出一種輕鬆、愉悅的氛圍。',
+    desc: '溫馨的氛圍，在忙碌的生活中獲得一絲絲的溫暖和安慰。',
     link: 'Visual/6'
   },
 ]
