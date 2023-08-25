@@ -1,5 +1,3 @@
-import styles from "./styles/tailwind.css";
-
 export const About = () => {
     return(
         
@@ -37,7 +35,7 @@ export const About = () => {
               <div className="border-[#ECECEC] solid rounded-lg w-10 p-3">
                 <img src="./images/workimage.png" alt="workimage"/>
               </div>
-            <div className={styles.item}>
+            <div className="">
             <h4 className="font-sans font-bold text-base mb-2">中天電視股份有限公司</h4>
             <h5 className="font-sans font-normal text-base mb-2">電子商務 (2021 02 - Present)</h5>
             <ul>
@@ -52,7 +50,7 @@ export const About = () => {
             <div className="border-[#ECECEC] solid rounded-lg w-10 p-3">
             <img src="./images/vino.jpeg" alt="workimage"/>
             </div>
-            <div className={styles.item}>
+            <div className="">
             <h4 className="font-sans font-bold text-base mb-2"> 唯諾國際有限公司 </h4>
             <h5 className="font-sans font-normal text-base mb-2"> 行銷設計 (2018/10 - 2020/10) </h5>
             <ul>
@@ -67,7 +65,7 @@ export const About = () => {
             <div className="border-[#ECECEC] solid rounded-lg w-10 p-3">
             <img src="./images/coffee.jpeg" alt="workimage"/>
             </div>
-            <div className={styles.item}>
+            <div className="">
             <h4 className="font-sans font-bold text-base mb-2"> 多一點有限公司</h4>
             <h5 className="font-sans font-normal text-base mb-2"> 儲備幹部 (2017/08 - 2018/08)</h5>
             <ul>
