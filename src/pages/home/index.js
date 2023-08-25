@@ -1,5 +1,4 @@
 import { PortfolioList } from "../../components/Portfolio/portfolioList";
-import styles from "./styles/tailwind.css";
 
 
 export const Home = () => {

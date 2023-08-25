@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "../../components/Button";
-import styles from "./styles/tailwind.css";
 
 export const Todo = () =>{
   const [todos, setTodos] = useState([]);
@@ -77,9 +76,9 @@ export const Todo = () =>{
             <div className="border-solid-[-[#243c5a] p-5 rounded-xl mb-5" key={`todo-${index}`}>
             <h3 className="mt-0 flex justify-between">
               <span>{item.id}.{item.name}</span>
-              <span className={item.states ? 
+              {/* <span className={item.states ? 
               "align-top inline-block ml-2 bg-[#69A8aa] text-white p-1 text-xs rounded"
-              :styles.tag}>{tag}</span>
+              :styles.tag}>{tag}</span> */}
             </h3>
             <p>{item.state ? "完成日期: " : "預計完成日期:"}{item.dueDate}</p>
             {!item.state && (<Button onClick={() =>handleFinish (item.id)}>完成</Button>)}

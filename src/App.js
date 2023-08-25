@@ -6,6 +6,7 @@ import { Dashboard } from "./pages/portfolio/dashboard/dashboard";
 import { Todo } from "./pages/portfolio/todo";
 import { Calculator } from "./pages/portfolio/calculator";
 import "./App.scss";
+import styles from "./styles/tailwind.css";
 
 const App = () => {
   return (
