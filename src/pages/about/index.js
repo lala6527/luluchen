@@ -1,3 +1,42 @@
+const careers = [
+  {
+  img:"./images/workimage.png",
+  title:"中天電視股份有限公司",
+  date:"電子商務 (2021 02 - Present)",
+  responsibilities: [
+    "協助電商平台的營運",
+    "財務帳務相關處理",
+    "銷售報表製作",
+    "行銷活動宣傳",
+  ],
+},
+{ 
+  img:"./images/vino.jpeg",
+  title:"唯諾國際有限公司",
+  date:"行銷設計 (2018/10 - 2020/10)",
+  responsibilities: [
+    "行銷設計(EDM、通路文宣或海報與頸標製作)",
+    "企劃文案撰寫",
+    "活動安排",
+    "船務安排事宜",
+  ],
+},
+{
+  img:"./images/coffee.jpeg",
+  title:"多一點有限公司",
+  date:"儲備幹部 (2017/08 - 2018/08)",
+  responsibilities: [
+    "制訂作業標準流程等事宜",
+    "文案設計及菜單擬定",
+    "服務顧客維護顧客關係，客訴及危機處理",
+    "公司策略執行與推動",
+   
+  ],
+},
+
+]
+
+
 export const About = () => {
     return(
         
@@ -23,59 +62,31 @@ export const About = () => {
             <h3 className="font-sans font-bold text-2xl mb-10">Software I love to use</h3>
             <p className="font-sans font-normal text-2xl mb-5">經常所使用的工具。</p>
              <div className="grid grid-cols-4 gap-10">
-             <img src="./images/Figma.png" alt="Figma"/>
-             <img src="./images/Visual.png" alt="Visual Studio code"/>
-             <img src="./images/Github.png" alt="Github"/>
+             <img src="./images/figma.png" alt="figma"/>
+             <img src="./images/visual.png" alt="visual studio code"/>
+             <img src="./images/github.png" alt="github"/>
              <img src="./images/chrome.png" alt="chrome"/>            
             </div>
             <hr className="border-[#ECECEC] solid  my-16"/>
             </article>
+            
             <h3 className="font-sans font-bold text-2xl mb-2">Work experience</h3>
-            <figure className="flex pb-12">
-              <div className="border-[#ECECEC] solid rounded-lg w-10 p-3">
-                <img src="./images/workimage.png" alt="workimage"/>
-              </div>
-            <div className="">
-            <h4 className="font-sans font-bold text-base mb-2">中天電視股份有限公司</h4>
-            <h5 className="font-sans font-normal text-base mb-2">電子商務 (2021 02 - Present)</h5>
-            <ul>
-              <li>協助電商平台的營運</li>
-              <li>財務帳務相關處理</li>
-              <li>銷售報表製作</li>
-              <li>行銷活動宣傳</li>
+            {careers.map((career,index)=>(
+            <figure className="flex pb-12" key={index}>
+              <img src={career.img} alt="workimage" className="w-20 h-20 p-2 inline-block border border-black/10 rounded-lg bg-white" />
+            <div className="pl-4">
+            <h4 className="font-sans font-bold text-base mb-2">{career.title}</h4>
+            <h5 className="font-sans font-normal text-base mb-2">{career.date}</h5>
+            <ul className="list-disc pl-6 space-y-2 text-gray-500">
+              {career.responsibilities.map((responsibilities,index)=>(
+                <li key={index}>{responsibilities}</li>
+              ))}
             </ul>
             </div>
             </figure>
-            <figure className="flex pb-12">
-            <div className="border-[#ECECEC] solid rounded-lg w-10 p-3">
-            <img src="./images/vino.jpeg" alt="workimage"/>
-            </div>
-            <div className="">
-            <h4 className="font-sans font-bold text-base mb-2"> 唯諾國際有限公司 </h4>
-            <h5 className="font-sans font-normal text-base mb-2"> 行銷設計 (2018/10 - 2020/10) </h5>
-            <ul>
-              <li>行銷設計(EDM、通路文宣或海報與頸標製作)</li>
-              <li>企劃文案撰寫</li>
-              <li>活動安排</li>
-              <li>船務安排事宜</li>
-            </ul>
-            </div>
-            </figure>
-            <figure className="flex pb-12">
-            <div className="border-[#ECECEC] solid rounded-lg w-10 p-3">
-            <img src="./images/coffee.jpeg" alt="workimage"/>
-            </div>
-            <div className="">
-            <h4 className="font-sans font-bold text-base mb-2"> 多一點有限公司</h4>
-            <h5 className="font-sans font-normal text-base mb-2"> 儲備幹部 (2017/08 - 2018/08)</h5>
-            <ul>
-              <li>制訂作業標準流程等事宜</li>
-              <li>文案設計及菜單擬定</li>
-              <li>服務顧客維護顧客關係，客訴及危機處理</li>
-              <li>公司策略執行與推動</li>
-            </ul>
-            </div>
-            </figure>
+            ))}
+
+            
             <hr className="border-[#ECECEC] solid  my-16"/>
             <article>
             <h3 className="font-sans font-bold text-2xl mb-2">What I like to do</h3>
