@@ -1,4 +1,4 @@
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const portfolio = [
   {
@@ -26,7 +26,7 @@ const portfolio = [
 
 export const PortfolioList = () => {
   return (
-    <section className='container space-y-12'>
+    <section className="container space-y-12">
       {portfolio.map((item) => {
         return (
           <figure key={`portfolio-${item.name}`} className="flex flex-row-reverse leading-6">
