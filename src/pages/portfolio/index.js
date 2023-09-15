@@ -1,5 +1,5 @@
 
-import { PortfolioList } from "../../components/Portfolio/portfolioList";
+import { PortfolioList } from "../../components/Portfolio/PortfolioList";
 
 export const Portfolio = () =>{
     return(
