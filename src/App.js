@@ -21,8 +21,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/visual" element={<Visual />} />
         <Route path="/visual/:vid" element={<VisualDetail />} />
-      </Routes>      
+      </Routes>
       <Footer />
-    </BrowserRouter>  );
+    </BrowserRouter>);
 };
 export default App;
