@@ -131,7 +131,8 @@ import {twMerge} from "tailwind-merge";
 
    
         return(
-        <div className={`w-[480px] rounded-lg overflow-hidden mx-auto shadow 
+        <div className="m-6">    
+        <div className={`sm:max-w-screen-sm rounded-lg mx-auto overflow-hidden shadow 
         ${darkMode ? "bg-black text-white" : " bg-white text-black"}`}>
         <div className="flex justify-center p-3 text-xs">
             <span>9:41</span>
@@ -151,7 +152,7 @@ import {twMerge} from "tailwind-merge";
                     <img src="/images/moon.png" className="w-6 h-6 " onClick={() => setDarkMode(true)}/>
                 </div>
             </div>
-            <div className="h-[260px] w-full p-10 flex items-end justify-end text-4xl font-bold">{calc.num || calc.result}</div>
+            <div className="h-full w-full p-10 flex items-end justify-end text-4xl font-bold">{calc.num || calc.result}</div>
                 <div className={`grid grid-cols-4 grid-row-5 gap-3 h-[clac(100%)] p-5 ${darkMode} ?"bg-zinc-900" :"bg-zinc-50" `}>
                     {btnValues.flat().map((btn,i) => {
                         const commonBtnClass = `rounded-lg text-xl py-8 ${darkMode ?"text-white bg-zinc-900 hover:bg-zinc-700" 
@@ -193,7 +194,7 @@ import {twMerge} from "tailwind-merge";
                     })}
             </div>
         </div>
-
+</div>   
     )
     }
     export const Button =({className, onClick, children})=>{

@@ -44,19 +44,20 @@ export const Visual = () => {
 return (
     <div>
         <div className="container">
-        <h1 className="pt-[120px] text-center text-5xl font-bold leading-[68px]">視覺作品集</h1>
-            <p className="text-center text-4xl leading-[51px] pb-[120px] text-[#7d7d7d]">
+        <h1 className="text-4xl text-center leading-10 font-bold mb-3 lg:text-5xl lg:leading-[67px]">視覺作品集</h1>
+            <p className="text-xl text-center leading-10 text-gray lg:text-4xl lg:leading-[50px] pb-10">
             這個作品集展示設計和創意能力，同時反映我的個人風格，每一個作品都有我對設計的熱情和追求。
             並且注重細節和實用性，力求讓每一個設計都具有美感和功能性。
             </p>
         
-        <div className="grid grid-cols-2 gap-10 pb-10 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pb-10 ">
         {visualData.map((item,index) =>{
             return(
             <div className="relative group">
-		    <img src= {item.img} className="rounded-xl"/>
+		      <img src= {item.img} className="rounded-xl"/>
                 <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:bg-black/60 group-hover:opacity-100 transition duration-300 ease-in-out rounded-xl">
-                    <div className="absolute z-10 rounded-xl top-1/2 left-1/2 bg-white -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100">
+                    <div className="absolute z-10 rounded-xl top-1/2 lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2 left-1 -translate-x-1 bg-white opacity-0 
+                    group-hover:opacity-100 scale-75 lg:scale-100">
                       <div className="p-7">
                         <h3 className="text-xl font-bold leading-[34px] pb-5">{item.name}</h3>
                         <p className="text-xl leading-[34px]">{item.desc} <br/>
