@@ -85,22 +85,20 @@ export const About = () => {
             </div>
           </figure>
         ))}
-
-
-        <hr className="border-[#ECECEC] solid  my-16" />
-        <article>
-          <h3 className="font-sans font-bold text-2xl mb-2">What I like to do</h3>
-          <p className="font-sans font-normal text-base text-[#7D7D7D] mb-2">
-            平時喜歡旅遊拍照，大學時期很喜歡跑馬拉松，最近開始喜歡上爬山。</p>
-          <div className="grid grid-cols-4 gap-10">
-            <img src="./images/instagram_01.png" alt="instagram photo" />
-            <img src="./images/instagram_02.png" alt="instagram photo" />
-            <img src="./images/instagram_03.png" alt="instagram photo" />
-            <img src="./images/instagram_04.png" alt="instagram photo" />
-          </div>
-        </article>
-      </div>
-    </div>
-  )
+            <hr className="border-[#ECECEC] solid  my-16"/>
+            <article>
+            <h3 className="font-sans font-bold text-2xl mb-2">What I like to do</h3>
+            <p className="font-sans font-normal text-base text-[#7D7D7D] mb-2">
+              平時喜歡旅遊拍照，大學時期很喜歡跑馬拉松，最近開始喜歡上爬山。</p>
+             <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
+             <img src="./images/instagram_01.png" alt="instagram photo"/>
+             <img src="./images/instagram_02.png" alt="instagram photo"/>
+             <img src="./images/instagram_03.png" alt="instagram photo"/>
+             <img src="./images/instagram_04.png" alt="instagram photo"/>            
+            </div>
+            </article>
+            </div>           
+        </div>
+    )
 
 }

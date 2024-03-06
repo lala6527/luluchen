@@ -54,7 +54,7 @@ export const Todo = () =>{
     <div>
       <h6 className="m-0 px-4 py-8 font-sans font-medium text-xl tracking-wider leading-relaxed 
       overflow-hidden text-ellipsis whitespace-nowrap bg-[#69A8aa] text-white shadow-sm">Todo List</h6>
-      <div className="grid grid-cols-2 gap-5 m-7">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 m-7">
       <div className="bg-[#eeeeee] p-7">
       <label htmlFor="name" className="flex flex-col mx-0 my-5">
       <span className="mt-2">名稱：</span>
