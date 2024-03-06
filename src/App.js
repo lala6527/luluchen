@@ -5,8 +5,8 @@ import { VisualDetail } from "./pages/visual/detail";
 import { Dashboard } from "./pages/portfolio/dashboard/dashboard";
 import { Todo } from "./pages/portfolio/todo";
 import { Calculator } from "./pages/portfolio/calculator";
+import "./styles/tailwind.css";
 import "./App.scss";
-import styles from "./styles/tailwind.css";
 
 const App = () => {
   return (
@@ -16,13 +16,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/todo" element={<Todo />} />
-        { <Route path="/portfolio/dashboard" element={<Dashboard />} /> }
+        <Route path="/portfolio/dashboard" element={<Dashboard />} />
         <Route path="/portfolio/calculator" element={<Calculator />} />
         <Route path="/about" element={<About />} />
         <Route path="/visual" element={<Visual />} />
         <Route path="/visual/:vid" element={<VisualDetail />} />
-      </Routes>      
+      </Routes>
       <Footer />
-    </BrowserRouter>  );
+    </BrowserRouter>);
 };
 export default App;

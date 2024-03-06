@@ -1,24 +1,20 @@
 export const Footer = () => {
-
-  const footerStyleItem ="flex justify-center gap-6";
-
+  const iconStyle = "lg:w-20 lg:h-20 w-12 h-12";
   return (
-
-   
-   <footer className="flex justify-center border-t-[#d9d9d9] pt-15 pb-10 mt-15">
+   <footer className="py-4">
+    <hr className="border-1 border-slate-100 my-4" />
     <div className="container">
-      <div className="flex justify-center border-t-[#d9d9d9] pt-12 pb-10 mt-12">
+      <div className="flex justify-center">
        <a href="https://github.com/lala6527/luluchen.git" target="_blank" >
-        <img src="/images/Githubicon.png"  alt="Github" className={footerStyleItem} /></a>
+        <img src="/images/Githubicon.png"  alt="Github" className={iconStyle}/></a>
        <a href="https://www.linkedin.com/in/jihan-chen-b64850257" target="_blank" >
-        <img src="/images/Linkedinicon.png" alt="Linkedin" className={footerStyleItem}/></a>
+        <img src="/images/Linkedinicon.png" alt="Linkedin" className={iconStyle}/></a>
        <a href="https://www.instagram.com/bonnie_55417/" target="_blank">
-        <img src="/images/Igicon.png" alt="IG" className={footerStyleItem}/></a>
+        <img src="/images/Igicon.png" alt="IG" className={iconStyle}/></a>
        </div>
-      <p className="flex justify-center text-gray leading-5 lg:text-base text-xs">© LuLu Chen 2022 Copyright. All Rights Reserved.</p>
+      <p className="lg:text-sm text-xs text-slate-400 text-center">© LuLu Chen 2022 Copyright. All Rights Reserved.</p>
      </div>
   </footer>
-
   )
 }
 
